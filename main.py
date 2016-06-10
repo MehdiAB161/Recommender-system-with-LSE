@@ -63,27 +63,6 @@ with open("ratings1M.dat") as FILE:
         coord_index += 1
 FILE.close()
 
-# #  FILE 10M
-# users = int(71567)
-# movies = int(10681)
-# R = np.empty((users, movies))
-# R[:] = np.NAN
-# data_set_size = int(10000054)
-# Coor = np.empty((data_set_size, 2))
-#
-# coord_index = 0
-# with open("ratings10M.dat") as FILE:
-#     for line in FILE:
-#         info = line.split("::", 3)
-#         user = int(info[0]) - 1
-#         item = int(info[1]) - 1
-#         rating = float(info[2])
-#         R[user, item] = rating
-#         Coor[coord_index, 0] = user
-#         Coor[coord_index, 1] = item
-#         coord_index += 1
-# FILE.close()
-
 # Sampling data
 print("Sampling ...")
 test_set_size = int(data_set_size * test_set_ratio)
